@@ -27,7 +27,7 @@ Because the trained .keras model exceeds GitHub's 100MB file limit, the weights 
 
 To run the code locally, download the model from the link above and place it in the same directory as model.py.
 
-##⚙️ Dependencies
+## ⚙️ Dependencies
 
 To install the required packages, run:
 

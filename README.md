@@ -1,4 +1,4 @@
-🪲 Imageomics HDR-SMood Challenge: Beetle Drought Prediction
+###🪲 Imageomics HDR-SMood Challenge: Beetle Drought Prediction
 
 This repository hosts the official submission for the Imageomics HDR-SMood Challenge.
 
@@ -22,7 +22,7 @@ best_beetle_model.keras: (Hosted externally due to GitHub file size limits).
 
 Because the trained .keras model exceeds GitHub's 100MB file limit, the weights are hosted securely on Google Drive.
 
-[LINK TO GOOGLE DRIVE MODEL HERE]
+https://drive.google.com/drive/folders/1Nbews_ud8c-qjs0RTMDK_qfpv_lSMEE0?usp=sharing
 
 To run the code locally, download the model from the link above and place it in the same directory as model.py.
 

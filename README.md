@@ -1,4 +1,4 @@
-#🪲 Imageomics HDR-SMood Challenge: Beetle Drought Prediction
+# 🪲 Imageomics HDR-SMood Challenge: Beetle Drought Prediction
 
 This repository hosts the official submission for the Imageomics HDR-SMood Challenge.
 

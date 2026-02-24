@@ -20,10 +20,12 @@ Our model leverages deep learning to predict environmental drought indices (Stan
 
 ## 📥 Model Weights Download
 
-Because the trained .keras model exceeds GitHub's 100MB file limit, the weights are hosted securely on Google Drive.
+## 📥 Model Weights Download
 
-[Download Model Weights]
-(https://drive.google.com/drive/folders/1Nbews_ud8c-qjs0RTMDK_qfpv_lSMEE0?usp=sharing)
+To comply with FAIR data storage standards, the trained `.keras` model weights are hosted securely on Hugging Face.
+
+**[Download Model Weights from Hugging Face]
+(https://huggingface.co/Nebiyu7/beetle-drought-prediction)**
 
 To run the code locally, download the model from the link above and place it in the same directory as model.py.
 

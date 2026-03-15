@@ -18,7 +18,7 @@ Our model leverages deep learning to predict environmental drought indices (Stan
 
 - **best_beetle_model.keras**: (Hosted externally due to GitHub file size limits).
 
-## 📥 Model Weights Download
+
 
 ## 📥 Model Weights Download
 

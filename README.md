@@ -8,6 +8,14 @@ Our architecture leverages a Dual-Branch Convolutional Neural Network (CNN) to p
 - **Multi-Modal**: Architecture: Engineered a custom TensorFlow model combining an EfficientNetV2B2 image feature extractor with dense layers for categorical metadata (Scientific Name, Domain ID).
 - **Data Pipeline Optimization**: Mitigated GPU data-starvation and memory bottlenecks by implementing local SSD caching and asynchronous data batching via tf.data.AUTOTUNE.
 - **Dynamic Batch Inference**: Developed a robust inference pipeline capable of dynamically resizing variable-resolution imagery and handling missing tensors in real-time.
+
+## 🧠 Model Architecture
+
+## 📊 Model Performance
+
+- **30-Day SPEI**: MAE: 0.590
+- **1-Year SPEI**: MAE: 0.328 | R²: 0.743
+- **2-Year SPEI**: MAE: 0.267 | R²: 0.840
 ## Team Information
 
 **Team Name:** nebiyu
@@ -23,7 +31,6 @@ Our architecture leverages a Dual-Branch Convolutional Neural Network (CNN) to p
 - **best_beetle_model.keras**: (Hosted externally due to GitHub file size limits).
 
 
-
 ## 📥 Model Weights Download
 
 To comply with FAIR data storage standards, the trained `.keras` model weights are hosted securely on Hugging Face.
@@ -33,8 +40,16 @@ To comply with FAIR data storage standards, the trained `.keras` model weights a
 
 To run the code locally, download the model from the link above and place it in the same directory as model.py.
 
-## ⚙️ Dependencies
+## ⚙️ Quick Start
 
-To install the required packages, run:
+1. Clone the repository and install dependencies:
 
-pip install -r requirements.txt
+   pip install -r requirements.txt
+
+2. Initialize the model and run predictions:
+
+    from model import Model
+    predictor = Model()
+    predictor.load()
+    # Pass a list of dictionaries containing image paths and metadata
+    predictions = predictor.predict(inputs)

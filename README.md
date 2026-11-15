@@ -9,9 +9,10 @@ Our architecture leverages a Dual-Branch Convolutional Neural Network (CNN) to p
 - **Data Pipeline Optimization**: Mitigated GPU data-starvation and memory bottlenecks by implementing local SSD caching and asynchronous data batching via tf.data.AUTOTUNE.
 - **Dynamic Batch Inference**: Developed a robust inference pipeline capable of dynamically resizing variable-resolution imagery and handling missing tensors in real-time.
 
-## 🧠 Model Architecture
+![Model Architecture Diagram](./model_architecture.png)
 
 ## 📊 Model Performance
+![Model Performance Graph](./results_graph.png)
 
 - **30-Day SPEI**: MAE: 0.590
 - **1-Year SPEI**: MAE: 0.328 | R²: 0.743

@@ -52,6 +52,6 @@ To run the code locally, download the model from the link above and place it in 
 
     predictor = Model()
     predictor.load()
-    #### Pass a list of dictionaries containing image paths and metadata
+    # Pass a list of dictionaries containing image paths and metadata
     predictions = predictor.predict(inputs)
 ```

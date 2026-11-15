@@ -43,13 +43,15 @@ To run the code locally, download the model from the link above and place it in 
 ## ⚙️ Quick Start
 
 1. Clone the repository and install dependencies:
-
+```bash
    pip install -r requirements.txt
-
+```
 2. Initialize the model and run predictions:
-
+```python
     from model import Model
+
     predictor = Model()
     predictor.load()
     #### Pass a list of dictionaries containing image paths and metadata
     predictions = predictor.predict(inputs)
+```

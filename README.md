@@ -1,9 +1,13 @@
 # 🪲 Imageomics HDR-SMood Challenge: Beetle Drought Prediction
 
-This repository hosts the official submission for the Imageomics HDR-SMood Challenge.
+This repository hosts the official 1st Place submission for the multi-institute Imageomics HDR-SMood Challenge.
 
-Our model leverages deep learning to predict environmental drought indices (Standardized Precipitation Evapotranspiration Index - SPEI) across multiple timeframes (30-day, 1-year, and 2-year). By combining advanced image analysis with machine learning, we achieve robust drought prediction capabilities.
+Our architecture leverages a Dual-Branch Convolutional Neural Network (CNN) to predict environmental drought severity (Standardized Precipitation Evapotranspiration Index - SPEI) across 30-day, 1-year, and 2-year timeframes. By fusing 20,000+ high-resolution biological images with tabular metadata, we achieved a top R² score of 0.840.
 
+## 🚀 Engineering Highlights
+- **Multi-Modal**: Architecture: Engineered a custom TensorFlow model combining an EfficientNetV2B2 image feature extractor with dense layers for categorical metadata (Scientific Name, Domain ID).
+- **Data Pipeline Optimization**: Mitigated GPU data-starvation and memory bottlenecks by implementing local SSD caching and asynchronous data batching via tf.data.AUTOTUNE.
+- **Dynamic Batch Inference**: Developed a robust inference pipeline capable of dynamically resizing variable-resolution imagery and handling missing tensors in real-time.
 ## Team Information
 
 **Team Name:** nebiyu

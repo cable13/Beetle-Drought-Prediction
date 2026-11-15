@@ -6,7 +6,9 @@ import pandas as pd
 import tensorflow as tf
 import numpy as np
 from PIL import Image
-
+import logging
+ # Configure logging to track silent failures and debug corrupt images in production
+logging.basicConfig(level=logging.WARNING, format='%(levelname)s: %(message)s')
 class Model:
     def __init__(self):
         self.model = None
@@ -46,14 +48,21 @@ class Model:
                 img_tensor = tf.image.resize(img_tensor, [self.IMG_SIZE, self.IMG_SIZE])
                 img_tensor.set_shape([self.IMG_SIZE, self.IMG_SIZE, 3])
                 
-                name = str(record.get("scientificName", "Unknown"))
+                 name = str(record.get("scientificName", "Unknown"))
                 domain = str(record.get("domainID", "Unknown"))
                 
                 processed_images.append(img_tensor)
                 names.append(name)
                 domains.append(domain)
                 
-            except Exception:
+            except tf.errors.NotFoundError:
+                logging.warning(f"Image not found for path: {record.get('relative_img_loc', 'Unknown Path')}")
+                continue
+            except tf.errors.InvalidArgumentError:
+                logging.warning(f"Corrupted or invalid image format: {record.get('relative_img_loc', 'Unknown Path')}")
+                continue
+            except Exception as e:
+                logging.warning(f"Unexpected error processing record {record.get('scientificName', 'Unknown')}: {e}")
                 continue
 
         if not processed_images:
